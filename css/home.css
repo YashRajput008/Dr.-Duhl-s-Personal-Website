@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&family=Stick+No+Bills&family=Amatic+SC:wght@700&family=DM+Mono:wght@300;400;500&display=swap");
+/* Fonts:
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Stick No Bills', sans-serif;
+font-family: 'Amatic SC', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgc2);
+}
+
+:root {
+  --bgc1: #12181b;
+  --bgc2: #2b3941;
+  --bgc3: #445a67;
+  --bgc4: #445a67;
+  --text-clr1: #edf0f1;
+  --btn-clr: rgb(241, 150, 14);
+  --btn-clr-hover: #f97316;
+  --card-clr: #17141d;
+}
