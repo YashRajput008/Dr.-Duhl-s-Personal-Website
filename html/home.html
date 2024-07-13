@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dr. Jozsef S. Duhl, a gastroenterologist in Avenel, New Jersey, with over 21 years of experience."
+    />
+    <meta
+      name="keywords"
+      content="Gastroenterologist, Dr. Jozsef S. Duhl, Avenel, New Jersey, colonoscopy, endoscopy"
+    />
+    <meta name="author" content="Yash Rajput" />
     <title>Dr. Jozsef S. Duhl | Gastroenterology</title>
     <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
-    <header>
+    <header role="banner">
       <div class="container">
         <h1>Dr. Jozsef S. Duhl, MD</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -23,14 +32,23 @@
     </header>
     <section id="hero">
       <div class="container pic">
-        <img src="../assets/Photos/FirstPicture.jpg" alt="Dr. Jozsef S. Duhl" />
+        <img
+          src="../assets/Photos/FirstPicture.jpg"
+          alt="Dr. Jozsef S. Duhl in his office"
+          loading="lazy"
+        />
         <h2>Expert in Gastroenterology</h2>
         <p>Over 21 years of experience</p>
-        <a href="contact.html" class="btn">Schedule an Appointment</a>
+        <a
+          href="contact.html"
+          class="btn"
+          aria-label="Schedule an Appointment with Dr. Jozsef S. Duhl"
+          >Schedule an Appointment</a
+        >
       </div>
 
       <div class="container about">
-        <h2>About Dr. Jozsef S. Duhl</h2>
+        <h2>Who is he?</h2>
         <p>
           Dr. Jozsef S. Duhl is a gastroenterologist in Avenel, New Jersey and
           is affiliated with multiple hospitals in the area, including JFK
@@ -47,10 +65,14 @@
       </div>
     </section>
 
-    <footer>
+    <footer role="contentinfo">
       <div class="container">
         <p>&copy; 2024 Yash Rajput. All rights reserved.</p>
       </div>
     </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to Top">↑</a>
+
+    <script src="../js/home.js"></script>
   </body>
 </html>

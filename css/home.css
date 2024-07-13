@@ -66,6 +66,26 @@ header nav ul li a {
   transition: transform 0.3s;
 }
 
+header nav ul li a:focus {
+  outline: 2px solid #000;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3rem;
+  transition: 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
 footer {
   background: #333;
   color: #fff;
@@ -79,6 +99,8 @@ footer {
 /* Hero Section */
 #hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pic {
@@ -88,6 +110,8 @@ footer {
   font-family: "Barlow Condensed", sans-serif;
   font-size: x-large;
   justify-content: start;
+  width: 600px;
+  margin: 30px;
 }
 
 .pic img {
@@ -96,17 +120,74 @@ footer {
   box-shadow: 0 0 20px grey;
   width: 350px;
   height: 450px;
+  margin: 0;
+  padding: 0 0;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  outline-color: #0056b3;
+  box-shadow: 0 0 20px #007bff;
 }
 
 .about {
+  flex: 1 1 50%;
   padding: 50px;
-  align-items: center;
-  flex-wrap: nowrap;
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  margin: 80px 0;
+  max-width: 800px;
+}
+
+.about h2:hover {
+  transform: translateY(1.1);
 }
 
 /* End of "Hero Section" */
 
+/* Back to Top Btn */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #587594;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+  background-color: #0056b3;
+}
+/* End of "Back to Top Btn */
+
 /* Media Queries | Responsive */
+
+@media (max-width: 1000px) {
+  #hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex: 1 1 100%;
+    padding: 20px;
+    margin: 40px 0;
+  }
+
+  .pic {
+    padding: 20px 0;
+  }
+}
+
 @media (max-width: 740px) {
   header h1,
   header nav {
@@ -126,16 +207,23 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
-  .about {
-  }
-}
-
 @media (max-width: 1070px) {
   header h1,
   header nav {
     float: none;
     text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .pic {
+    width: auto;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
 /* End of "Media Queries" */
