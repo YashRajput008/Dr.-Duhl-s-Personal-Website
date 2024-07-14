@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&family=Stick+No+Bills&family=Amatic+SC:wght@700&family=DM+Mono:wght@300;400;500&display=swap");
-/* Fonts:
-font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Bebas Neue', sans-serif;
-font-family: 'Stick No Bills', sans-serif;
-font-family: 'Amatic SC', sans-serif;
-*/
 
 * {
   box-sizing: border-box;
@@ -70,6 +64,81 @@ footer {
   padding: 10px 0;
   margin-top: 20px;
   font-family: "Stick No Bills", sans-serif;
+}
+
+/* Content */
+
+.about {
+  padding: 40px 5%;
+}
+
+.about-title {
+  padding: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.about-card {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.about-card h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.about-card h3 img {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.about-card p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  transform: scale(1.1);
+}
+
+.about-card:hover * {
+  position: relative;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 15px;
+  background: linear-gradient(0deg, #ff6f61, #de5d83, #9b51e0, #5a67d8);
+  z-index: -13;
 }
 
 @media (max-width: 740px) {

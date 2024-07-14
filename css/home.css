@@ -66,8 +66,12 @@ header nav ul li a {
   transition: transform 0.3s;
 }
 
-header nav ul li a:focus {
-  outline: 2px solid #000;
+li {
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.05);
 }
 
 .btn {
@@ -123,6 +127,7 @@ footer {
   margin: 0;
   padding: 0 0;
   transition: 0.3s;
+  animation: fadeIn 2s forwards;
 }
 
 img:hover {
@@ -139,6 +144,20 @@ img:hover {
   font-size: 22px;
   margin: 80px 0;
   max-width: 800px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about h2:hover {
