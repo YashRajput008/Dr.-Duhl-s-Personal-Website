@@ -123,10 +123,7 @@ footer {
 .about-card:hover {
   transform: translateY(-10px);
   transform: scale(1.1);
-}
-
-.about-card:hover * {
-  position: relative;
+  z-index: 1;
 }
 
 .about-card::before {
@@ -138,7 +135,7 @@ footer {
   bottom: -5px;
   border-radius: 15px;
   background: linear-gradient(0deg, #ff6f61, #de5d83, #9b51e0, #5a67d8);
-  z-index: -13;
+  z-index: -1;
 }
 
 @media (max-width: 740px) {
@@ -165,5 +162,78 @@ footer {
   header nav {
     float: none;
     text-align: center;
+  }
+}
+
+/* About Section Styling */
+#about {
+  background: #f8f9fa;
+  padding: 50px 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #333;
+}
+
+#about .container {
+  width: 80%;
+  margin: auto;
+}
+
+#about h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+#about h3 {
+  font-size: 2em;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+#about p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+#about a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#about a:hover,
+#about a:focus {
+  text-decoration: underline;
+}
+
+.history,
+.awards-ratings,
+.expertise {
+  margin-bottom: 30px;
+}
+
+.history p,
+.awards-ratings p,
+.expertise p {
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #about .container {
+    width: 95%;
+  }
+
+  #about h2 {
+    font-size: 2.5em;
+  }
+
+  #about h3 {
+    font-size: 1.8em;
+  }
+
+  #about p {
+    font-size: 1em;
   }
 }
