@@ -66,6 +66,11 @@ header nav ul li a {
   transition: transform 0.3s;
 }
 
+header nav ul li a:hover {
+  background-color: #8ccacb;
+  transform: scale(1.05);
+}
+
 li {
   transition: 0.3s;
 }
@@ -185,6 +190,10 @@ img:hover {
 .back-to-top:hover,
 .back-to-top:focus {
   background-color: #0056b3;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /* End of "Back to Top Btn */
 

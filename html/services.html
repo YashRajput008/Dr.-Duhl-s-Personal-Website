@@ -3,23 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <meta
+      name="description"
+      content="Services provided by Dr. Jozsef S. Duhl, a gastroenterologist in Avenel, New Jersey."
+    />
+    <meta
+      name="keywords"
+      content="Gastroenterologist, Dr. Jozsef S. Duhl, Avenel, New Jersey, services, procedures, patient resources"
+    />
+    <meta name="author" content="Yash Rajput" />
+    <title>Dr. Jozsef S. Duhl | Services</title>
     <link rel="stylesheet" href="../css/services.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <header>
+    <header role="banner">
       <div class="container">
         <h1>Dr. Jozsef S. Duhl, MD</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="nav"><a href="home.html">Home</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="services.html">Services</a></li>
+            <li class="nav"><a href="reviews.html">Reviews</a></li>
+            <li class="nav"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="service-item">
+          <h3>Colonoscopy</h3>
+          <p>
+            A procedure to examine the colon for polyps, cancer, and other
+            abnormalities.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Upper GI Endoscopy</h3>
+          <p>
+            An examination of the upper part of the gastrointestinal tract to
+            diagnose and treat conditions affecting the esophagus, stomach, and
+            duodenum.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Gastroenteritis Treatment</h3>
+          <p>
+            Care and management for inflammation of the gastrointestinal tract,
+            typically caused by infections.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Capsule Endoscopy</h3>
+          <p>
+            A diagnostic procedure using a small, pill-sized camera to capture
+            images of the small intestine.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>ERCP</h3>
+          <p>
+            A technique combining endoscopy and fluoroscopy to diagnose and
+            treat problems of the bile and pancreatic ducts.
+          </p>
+        </div>
+
+        <h2>Patient Resources and Educational Materials</h2>
+
+        <div class="resource-item">
+          <h3>Dietary Guidelines</h3>
+          <p>
+            Information on proper nutrition for managing gastrointestinal
+            health.
+          </p>
+          <button type="button">Visit</button>
+        </div>
+
+        <div class="resource-item">
+          <h3>Medication Management</h3>
+          <p>
+            Guidance on the use of medications for treating digestive disorders.
+          </p>
+          <button class="resource-btn" type="button">Visit</button>
+        </div>
+
+        <div class="resource-item">
+          <h3>Lifestyle Tips</h3>
+          <p>
+            Advice on lifestyle changes to improve digestive health, including
+            exercise and stress management.
+          </p>
+          <button class="resource-btn" type="button">Visit</button>
+        </div>
+
+        <div class="resource-item">
+          <h3>Procedure Preparation</h3>
+          <p>
+            Instructions for preparing for various gastrointestinal procedures,
+            including dietary restrictions and medication adjustments.
+          </p>
+          <button class="resource-btn" type="button">Visit</button>
+        </div>
+
+        <div class="resource-item">
+          <h3>Support Groups</h3>
+          <p>
+            Information on local and online support groups for patients with
+            chronic digestive conditions.
+          </p>
+          <button class="resource-btn" type="button">Visit</button>
+        </div>
+      </div>
+    </section>
+
+    <footer role="contentinfo">
+      <div class="container">
+        <p>&copy; 2024 Yash Rajput. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to Top">↑</a>
+
+    <script src="../js/Scroll.js"></script>
   </body>
 </html>
