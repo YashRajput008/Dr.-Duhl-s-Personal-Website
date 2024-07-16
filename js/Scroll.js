@@ -1,13 +1,3 @@
-// Show/hide back to top button
-window.addEventListener("scroll", function () {
-  const backToTopButton = document.querySelector(".back-to-top");
-  if (window.scrollY > 200) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-});
-
 $(document).ready(function () {
   // Smooth scrolling for internal links
   $("a[href^='#']").on("click", function (event) {
