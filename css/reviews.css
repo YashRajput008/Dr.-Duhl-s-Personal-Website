@@ -25,8 +25,6 @@ header {
   color: #000000;
   padding: 20px 0;
   margin-bottom: 10px;
-  border-bottom: 5px solid;
-  border-image: linear-gradient(to right, #a2ddde, #587594) 1;
 }
 
 header h1 {
@@ -92,9 +90,9 @@ footer {
 
 /* Review Carousel Styling */
 .carousel {
-  height: 600px;
+  height: 700px;
   margin: 30px;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 50px;
   display: grid;
   grid-template-rows: 500px 100px;
@@ -148,7 +146,7 @@ div.item {
   height: 500px;
   padding: 20px 30px;
   background-color: white;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Stick No Bills", sans-serif;
   font-size: large;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
@@ -182,6 +180,7 @@ div.item:hover {
 div.item:nth-of-type(1) {
   --offset: 1;
 }
+
 div.item:nth-of-type(2) {
   --offset: 2;
 }
