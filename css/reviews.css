@@ -55,6 +55,28 @@ header nav ul li a {
   border-radius: 5px;
   font-size: 30px;
   transition: transform 0.3s;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: #ff3c78;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header nav ul li a:hover {
+  color: #007bff;
+  transform: scale(1.05);
 }
 
 footer {
