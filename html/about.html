@@ -9,13 +9,11 @@
   </head>
   <body>
     <header>
-      <div class="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <div class="container">
         <h1>Dr. Jozsef S. Duhl, MD</h1>
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
         <nav>
           <ul>
             <li><a href="home.html">Home</a></li>
@@ -27,6 +25,23 @@
         </nav>
       </div>
     </header>
+    <nav class="mobile-nav">
+      <a href="home.html"
+        >Home <img src="../assets/Interface/house.svg" alt="Home"
+      /></a>
+      <a href="about.html"
+        >About <img src="../assets/Interface/about.svg" alt="About"
+      /></a>
+      <a href="services.html"
+        >Services <img src="../assets/Interface/services.svg" alt="Services"
+      /></a>
+      <a href="reviews.html"
+        >Reviews <img src="../assets/Interface/reviews.svg" alt="Reviews"
+      /></a>
+      <a href="contact.html"
+        >Contact <img src="../assets/Interface/contact.svg" alt="Contact"
+      /></a>
+    </nav>
 
     <section class="about">
       <h2 class="about-title">About the Doctor</h2>
@@ -165,5 +180,6 @@
 
     <!-- JavaScript -->
     <script src="../js/Scroll.js"></script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>

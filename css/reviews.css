@@ -118,7 +118,7 @@ footer {
   padding-bottom: 50px;
   display: grid;
   grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  grid-template-columns: 0.5fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 0.5fr;
   align-items: center;
   justify-items: center;
 }
@@ -131,6 +131,7 @@ footer {
   border-radius: 1rem;
   padding: 3px 2px;
   align-self: center;
+  width: 50px;
 }
 
 .review-date {
@@ -138,15 +139,26 @@ footer {
   color: #666;
 }
 
+.review-header {
+  display: inline;
+}
+
 .review-text {
   font-size: 1.2em;
   line-height: 1.5;
   color: #333;
+
+  align-self: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
 }
 
 main#carousel {
   grid-row: 1 / 2;
-  grid-column: 1 / 8;
+  grid-column: 1 / 13;
   width: 100vw;
   height: 500px;
   display: flex;
@@ -154,17 +166,21 @@ main#carousel {
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 800px;
-  --items: 5;
+  perspective: 900px;
+  --items: 9;
   --middle: 3;
   --position: 1;
   pointer-events: none;
 }
 
+#carousel:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
 div.item {
   position: absolute;
   border-radius: 1rem;
-  width: 400px;
+  width: 800px;
   height: 500px;
   padding: 20px 30px;
   background-color: white;
@@ -180,29 +196,12 @@ div.item {
   border-style: ridge;
 }
 
-div.item::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 15px;
-  z-index: -1;
-
-  box-shadow: 0px 0px 10px black;
-}
-
-div.item:hover {
-  transform: scale(1.05) rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
-  box-shadow: 0px 0px 20px #587594;
+.item:hover {
 }
 
 div.item:nth-of-type(1) {
   --offset: 1;
 }
-
 div.item:nth-of-type(2) {
   --offset: 2;
 }
@@ -214,6 +213,18 @@ div.item:nth-of-type(4) {
 }
 div.item:nth-of-type(5) {
   --offset: 5;
+}
+div.item:nth-of-type(6) {
+  --offset: 6;
+}
+div.item:nth-of-type(7) {
+  --offset: 7;
+}
+div.item:nth-of-type(8) {
+  --offset: 8;
+}
+div.item:nth-of-type(9) {
+  --offset: 9;
 }
 
 input:nth-of-type(1) {
@@ -256,6 +267,38 @@ input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
 }
 
+input:nth-of-type(6) {
+  grid-column: 7 / 8;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(6):checked ~ main#carousel {
+  --position: 6;
+}
+
+input:nth-of-type(7) {
+  grid-column: 8 / 9;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(7):checked ~ main#carousel {
+  --position: 7;
+}
+
+input:nth-of-type(8) {
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(8):checked ~ main#carousel {
+  --position: 8;
+}
+
+input:nth-of-type(9) {
+  grid-column: 10 / 11;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(9):checked ~ main#carousel {
+  --position: 9;
+}
+
 /* Media Queries */
 @media (max-width: 740px) {
   header h1,
@@ -282,4 +325,112 @@ input:nth-of-type(5):checked ~ main#carousel {
     float: none;
     text-align: center;
   }
+}
+
+/* Hamburger Menu Styling */
+
+.hamburger {
+  position: fixed;
+  left: 95%;
+  top: 3%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  float: left;
+}
+
+.hamburger:hover::after {
+  transform: translateY(4px);
+}
+
+.hamburger:hover::before {
+  transform: translateY(-4px);
+}
+
+.hamburger:hover .bar {
+  transform: scale(1.009);
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(36, 47, 81);
+  margin: 6px 0px;
+  transition: 0.4s;
+  border-radius: 1rem;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(135deg) translate(7px, -8px);
+  transition: 0.4s;
+  z-index: 4;
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -8px);
+  transition: 0.4s;
+  z-index: 4;
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 4;
+}
+
+/* Mobile Navigation Styling */
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  left: 100%;
+  width: 250px;
+  height: fit-content;
+  padding-top: 20px;
+  background-color: #7aa4d1;
+  transition: 0.4s;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.mobile-nav.is-active {
+  left: calc(100% - 250px);
+  box-shadow: 2px 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+
+  background: linear-gradient(to right, lightblue 50%, royalblue 50%);
+  background-size: 200%;
+  background-position: 0 50%;
+
+  color: black;
+  text-decoration: none;
+  transition: 0.7s;
+  border-radius: 1rem;
+
+  font-size: 20px;
+  font-family: "Stick No Bills", sans-serif;
+}
+
+.mobile-nav a:hover {
+  background-position: 100% 50%;
+  color: white;
 }

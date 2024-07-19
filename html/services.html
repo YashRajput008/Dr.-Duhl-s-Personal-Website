@@ -17,20 +17,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <header role="banner">
+    <header>
       <div class="container">
         <h1>Dr. Jozsef S. Duhl, MD</h1>
-        <nav role="navigation" aria-label="Main navigation">
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+        <nav>
           <ul>
-            <li class="nav"><a href="home.html">Home</a></li>
-            <li class="nav"><a href="about.html">About</a></li>
-            <li class="nav"><a href="services.html">Services</a></li>
-            <li class="nav"><a href="reviews.html">Reviews</a></li>
-            <li class="nav"><a href="contact.html">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+    <nav class="mobile-nav">
+      <a href="home.html"
+        >Home <img src="../assets/Interface/house.svg" alt="Home"
+      /></a>
+      <a href="about.html"
+        >About <img src="../assets/Interface/about.svg" alt="About"
+      /></a>
+      <a href="services.html"
+        >Services <img src="../assets/Interface/services.svg" alt="Services"
+      /></a>
+      <a href="reviews.html"
+        >Reviews <img src="../assets/Interface/reviews.svg" alt="Reviews"
+      /></a>
+      <a href="contact.html"
+        >Contact <img src="../assets/Interface/contact.svg" alt="Contact"
+      /></a>
+    </nav>
 
     <section class="services">
       <div class="container">
@@ -85,7 +105,7 @@
             Information on proper nutrition for managing gastrointestinal
             health.
           </p>
-          <button type="button">Visit</button>
+          <button class="resource-btn" type="button">Visit</button>
         </div>
 
         <div class="resource-item">
@@ -134,5 +154,6 @@
     <a href="#" class="back-to-top" aria-label="Back to Top">↑</a>
 
     <script src="../js/Scroll.js"></script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>
