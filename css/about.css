@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
 }
 
@@ -22,7 +22,6 @@ header {
   background: #a2ddde;
   color: #000;
   padding: 20px 0;
-  margin-bottom: 10px;
 }
 
 header h1 {
@@ -86,29 +85,6 @@ footer {
   font-family: "Stick No Bills", sans-serif;
 }
 
-/* Content */
-
-.about {
-  padding: 40px 5%;
-}
-
-.about-title {
-  padding: 20px;
-  font-family: "Barlow Condensed", sans-serif;
-  color: #333;
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.about-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  animation: fadeIn 2s forwards;
-}
-
 /* Fade-in animation */
 @keyframes fadeIn {
   0% {
@@ -119,68 +95,6 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.about-card {
-  position: relative;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  z-index: 0;
-  transition: 0.5s;
-}
-
-.about-card::before {
-  content: "";
-  position: absolute;
-  top: -5px; /* Adjust this value for border thickness */
-  left: -5px; /* Adjust this value for border thickness */
-  right: -5px; /* Adjust this value for border thickness */
-  bottom: -10px; /* Adjust this value for border thickness */
-  border-radius: 20px;
-  z-index: -1;
-  background: linear-gradient(45deg, #ff6f61, #de5d83, #9b51e0, #5a67d8);
-}
-
-.about-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  border-radius: 40px;
-  z-index: -1;
-}
-
-.about-card:hover {
-  transform: scale(1.05); /* Scale effect only */
-}
-
-.about-card h3 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.about-card h3 img {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-}
-
-.about-card p {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 18px;
-  color: #666;
-  line-height: 1.5;
 }
 
 @media (max-width: 740px) {
@@ -238,60 +152,6 @@ footer {
     margin-bottom: 5px;
     padding-bottom: 10px;
   }
-}
-
-/* About Section Styling */
-#about {
-  background: #f8f9fa;
-  padding: 50px 20px;
-  font-family: "Barlow Condensed", sans-serif;
-  color: #333;
-}
-
-#about .container {
-  width: 80%;
-  margin: auto;
-}
-
-#about h2 {
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #343a40;
-}
-
-#about h3 {
-  font-size: 2em;
-  color: #343a40;
-  margin-bottom: 10px;
-}
-
-#about p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-#about a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-#about a:hover,
-#about a:focus {
-  text-decoration: underline;
-}
-
-.history,
-.awards-ratings,
-.expertise {
-  margin-bottom: 30px;
-}
-
-.history p,
-.awards-ratings p,
-.expertise p {
-  margin-bottom: 10px;
 }
 
 /* Back to Top Btn */
@@ -425,4 +285,63 @@ html {
 .mobile-nav a:hover {
   background-position: 100% 50%;
   color: white;
+}
+
+/* Section Styling */
+
+.container {
+  gap: 200px;
+}
+
+#section-title {
+  font-family: "Stick No Bills", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-size: 30px;
+}
+
+.history,
+.awards,
+.expertise {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-radius: 1rem;
+  font-family: "Stick No Bills", sans-serif;
+  background: whitesmoke;
+  width: 100%;
+  padding: 40px;
+  margin: 0;
+  outline: auto;
+  animation: fadeIn 2s forwards;
+}
+
+.history .box,
+.awards .box,
+.expertise .box {
+  outline: auto;
+  background: linear-gradient(to right, #ffcf67 50%, #d3321d 50%);
+  background-size: 200%;
+  background-position: 0 50%;
+  transition: 1s;
+  margin: 0 50px 20px 20px;
+  padding: 50px 20px;
+  border-radius: 1rem;
+}
+
+.history .box:hover,
+.awards .box:hover,
+.expertise .box:hover {
+  background-position: 100% 50%;
+  transform: translateY(-20px);
+  color: white;
+}
+
+.history .box .title,
+.awards .box .title,
+.expertise .box .title {
+  font-size: 20px;
+  text-align: center;
 }

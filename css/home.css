@@ -101,6 +101,7 @@ img:hover {
   max-width: 800px;
   opacity: 0;
   animation: fadeIn 2s forwards;
+  z-index: -5;
 }
 
 /* Fade-in animation */
@@ -360,6 +361,7 @@ html {
   position: fixed;
   left: 100%;
   width: 250px;
+  top: 10%;
   height: fit-content;
   padding-top: 20px;
   background-color: #7aa4d1;
