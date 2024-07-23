@@ -1,134 +1,164 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&family=Stick+No+Bills&family=Amatic+SC:wght@700&family=DM+Mono:wght@300;400;500&display=swap");
+/* Infinite Scroller */
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+.item {
+  width: 200px;
+  height: 100px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+
+  position: absolute;
+  left: max(calc(200px * var(--number)), 200%);
+
+  animation-name: scrollLeft;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  --duration: 20s;
+  --number: 14;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  padding: 20px;
+  overflow: hidden;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 5%,
+    rgba(0, 0, 0, 1) 95%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
   }
 }
 
-@media (max-width: 740px) {
-  header h1,
-  header nav {
-    float: none;
-    text-align: center;
-  }
-
-  header nav ul li {
-    display: grid;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  header nav ul li a {
-    font-size: 20px;
-    background-color: #8fcaca;
-  }
+.item1 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 1) * -1
+  );
 }
 
-@media (max-width: 768px) {
-  #about .container {
-    width: 95%;
-  }
-
-  #about h2 {
-    font-size: 2.5em;
-  }
-
-  #about h3 {
-    font-size: 1.8em;
-  }
-
-  #about p {
-    font-size: 1em;
-  }
+.item2 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 2) * -1
+  );
 }
 
-@media (max-width: 1070px) {
-  header h1,
-  header nav {
-    float: none;
-    text-align: center;
-  }
-
-  .about {
-    flex-direction: column;
-    margin-top: 10px;
-    padding-top: 10px;
-  }
-
-  .pic {
-    width: auto;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-  }
+.item3 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 3) * -1
+  );
 }
 
-/* Section Styling */
-
-#section-title {
-  font-family: "Stick No Bills", sans-serif;
-  text-align: center;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  font-size: 30px;
+.item4 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 4) * -1
+  );
 }
 
-.history,
-.awards,
-.expertise {
-  display: grid;
-  row-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+.item5 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 5) * -1
+  );
+}
 
-  border-radius: 1rem;
-  font-family: "Stick No Bills", sans-serif;
-  background: whitesmoke;
-  width: 100%;
-  padding: 40px;
-  margin: 0;
+.item6 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 6) * -1
+  );
+}
+
+.item7 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 7) * -1
+  );
+}
+
+.item8 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 8) * -1
+  );
+}
+
+.item9 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 9) * -1
+  );
+}
+
+.item10 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 10) * -1
+  );
+}
+
+.item11 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 11) * -1
+  );
+}
+
+.item12 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 12) * -1
+  );
+}
+
+.item13 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 13) * -1
+  );
+}
+
+.item14 {
+  animation-delay: calc(
+    var(--duration) / var(--number) * (var(--number) - 14) * -1
+  );
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.aetna {
+  width: 150px;
+  height: 80px;
+}
+
+.cigna {
+  width: 200px;
+  height: 80px;
+}
+
+.clover {
+  width: 120px;
+  height: 120px;
+}
+
+.extra-info {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+/* History Section */
+
+.history {
   outline: auto;
-  animation: fadeIn 2s forwards;
-}
-
-.history .box,
-.awards .box,
-.expertise .box {
-  outline: auto;
-  background: linear-gradient(to right, #ffcf67 50%, #d3321d 50%);
-  background-size: 200%;
-  background-position: 0 50%;
-  transition: 1s;
-  margin: 0 50px 20px 20px;
-  padding: 50px 20px;
-  border-radius: 1rem;
-}
-
-.history .box:hover,
-.awards .box:hover,
-.expertise .box:hover {
-  background-position: 100% 50%;
-  transform: translateY(-20px);
-  color: white;
-}
-
-.history .box .title,
-.awards .box .title,
-.expertise .box .title {
-  font-size: 20px;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .history,
-  .awards,
-  .expertise {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  padding: 20px 50px;
 }
