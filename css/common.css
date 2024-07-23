@@ -106,6 +106,7 @@ footer {
   border: none;
   transition: 0.5s;
   float: left;
+  z-index: 6;
 }
 
 .hamburger:hover::after {
