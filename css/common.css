@@ -22,8 +22,9 @@ body {
 header {
   font-family: "Barlow Condensed", sans-serif;
   background: #a2ddde;
-  color: #000;
+  color: #000000;
   padding: 20px 0;
+  margin-bottom: 10px;
 }
 
 header h1 {

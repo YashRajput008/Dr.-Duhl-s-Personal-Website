@@ -55,3 +55,15 @@
 
 - Testimonials from patients.
 - Links to review sites.
+
+          Dr. Jozsef S. Duhl is a gastroenterologist in Avenel, New Jersey and
+          is affiliated with multiple hospitals in the area, including JFK
+          University Medical Center at Hackensack Meridian Health and Raritan
+          Bay and Old Bridge Medical Centers at Hackensack Meridian Health. He
+          received his medical degree from Iuliu Hatieganu University of
+          Medicine and Pharmacy and has been in practice for more than 20 years.
+          Dr. Jozsef S. Duhl has expertise in treating colonoscopy, upper gi
+          endoscopy, gastroenteritis, among other conditions - see all areas of
+          expertise. Dr. Jozsef S. Duhl accepts Medicare, Aetna, Humana, Cigna,
+          Blue Cross, United Healthcare - see other insurance plans accepted.
+          Dr. Jozsef S. Duhl is highly recommended by patients.
