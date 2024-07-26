@@ -122,8 +122,13 @@
   .services .resource-item h3 {
     font-size: 1.5em;
   }
+
+  .services .service-item h3 {
+    text-align: center;
+  }
+
   .services .service-item p,
   .services .resource-item p {
-    font-size: 1em;
+    display: none;
   }
 }

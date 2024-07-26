@@ -6,11 +6,23 @@
   padding: 0;
 }
 
+:root {
+  --primary-important: #1d3557;
+  --primary-bg: #ffffff;
+  --secondary-nav: #457b9d;
+  --secondary-hover: #0056b3;
+  --secondary-shades: #f1faee;
+  --accent-highlight: #ff6200;
+  --accent-golden: #e9c46a;
+
+  --font-family: "Barlow Condensed", sans-serif;
+}
+
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
-  background-color: #f4f7f6;
-  color: #333;
+  background-color: var(--primary-bg);
+  color: var(--primary-important);
 }
 
 .header-container {
@@ -30,9 +42,9 @@ body {
 }
 
 header {
-  font-family: "Barlow Condensed", sans-serif;
-  background: #a2ddde;
-  color: #000000;
+  font-family: var(--font-family);
+  background: var(--primary-important);
+  color: var(--primary-bg);
   padding: 20px 0;
   margin-bottom: 10px;
 }
@@ -59,7 +71,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: black;
+  color: var(--primary-bg);
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -72,7 +84,7 @@ header nav ul li a {
 header nav ul li a::after {
   content: "";
   position: absolute;
-  background-color: #ff3c78;
+  background-color: var(--accent-highlight);
   height: 3px;
   width: 0;
   left: 0;
@@ -85,37 +97,17 @@ header nav ul li a:hover::after {
 }
 
 header nav ul li a:hover {
-  color: #007bff;
+  color: var(--accent-golden);
   transform: scale(1.05);
 }
 
 footer {
-  background: #333;
-  color: #fff;
+  background: var(--primary-important);
+  color: var(--primary-bg);
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
   font-family: "Stick No Bills", sans-serif;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: #587594;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 1rem;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  transition: background-color 0.3s;
-}
-
-.back-to-top:hover,
-.back-to-top:focus {
-  background-color: #0056b3;
 }
 
 .office-info,
@@ -133,7 +125,7 @@ footer {
 .office-info:hover,
 .appointment-form:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(38, 255, 204, 0.657);
+  box-shadow: 0 0 20px var(--accent-highlight);
 }
 
 .office-info h2,
@@ -148,7 +140,7 @@ footer {
   font-weight: bold;
   margin: 10px 0;
   color: #333;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-family);
 }
 
 .appointment-form input,
@@ -163,7 +155,7 @@ footer {
   color: #333;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-family);
 }
 
 .appointment-form textarea {
@@ -174,7 +166,7 @@ footer {
 .appointment-form input:focus,
 .appointment-form select:focus,
 .appointment-form textarea:focus {
-  border-color: #5bc0de;
+  border-color: var(--accent-highlight);
   outline: none;
 }
 
@@ -188,7 +180,7 @@ footer {
   font-size: 1.2em;
   margin-top: 20px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-family);
 }
 
 .appointment-form button:hover {
