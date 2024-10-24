@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Jozsef S. Duhl | Reviews</title>
     <link rel="stylesheet" href="../css/reviews.css" />
-    <link rel="stylesheet" href="../css/common.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
@@ -26,25 +25,12 @@
         </nav>
       </div>
     </header>
-    <nav class="mobile-nav">
-      <a href="home.html"
-        >Home <img src="../assets/Interface/house.svg" alt="Home"
-      /></a>
-      <a href="about.html"
-        >About <img src="../assets/Interface/about.svg" alt="About"
-      /></a>
-      <a href="services.html"
-        >Services <img src="../assets/Interface/services.svg" alt="Services"
-      /></a>
-      <a href="reviews.html"
-        >Reviews <img src="../assets/Interface/reviews.svg" alt="Reviews"
-      /></a>
-      <a href="contact.html"
-        >Contact <img src="../assets/Interface/contact.svg" alt="Contact"
-      /></a>
-    </nav>
-
     <div class="carousel">
+      
+      <button type="button" class="right-arrow">
+        <img class="right-btn" src="../assets/Interface/right.png" alt="right arrow">
+      </button>
+      <button type="button"><img class="left-btn" src="../assets/Interface/left.png" alt="left arrow"></button>
         <input type="radio" name="position" />
         <input type="radio" name="position" />
         <input type="radio" name="position" />
@@ -168,5 +154,34 @@
     <!-- JavaScript -->
     <script src="../js/Scroll.js"></script>
     <script src="../js/navbar.js"></script>
+    <script>
+
+document.querySelector('.left-btn').addEventListener('click', function() {
+  let checkedInput = document.querySelector('input[name="position"]:checked');
+  let prevInput = checkedInput.previousElementSibling;
+
+  if (prevInput && prevInput.name === 'position') {
+    prevInput.checked = true;
+  } else {
+    // Loop back to the last position if on the first item
+    let allInputs = document.querySelectorAll('input[name="position"]');
+    allInputs[allInputs.length - 1].checked = true;
+  }
+});
+
+document.querySelector('.right-btn').addEventListener('click', function() {
+  let checkedInput = document.querySelector('input[name="position"]:checked');
+  let nextInput = checkedInput.nextElementSibling;
+
+  if (nextInput && nextInput.name === 'position') {
+    nextInput.checked = true;
+  } else {
+    // Loop back to the first position if on the last item
+    let allInputs = document.querySelectorAll('input[name="position"]');
+    allInputs[0].checked = true;
+  }
+});
+
+    </script>
   </body>
 </html>

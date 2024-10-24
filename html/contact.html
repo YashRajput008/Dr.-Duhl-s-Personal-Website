@@ -42,7 +42,13 @@
       </div>
       <div class="appointment-form">
         <h2>Appointment Form</h2>
-        <form action="/submit_form" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="759c4703-c269-4af1-adb9-0ba176568a56"
+          />
+
           <input type="text" name="name" placeholder="Your name *" required />
           <input
             type="email"
