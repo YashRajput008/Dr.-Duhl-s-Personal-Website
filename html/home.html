@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header role="banner">
+    <header class="banner">
       <button class="hamburger">
         <div class="bar"></div>
       </button>
@@ -210,5 +210,17 @@
     <script src="../js/Scroll.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".hero");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (window.scrollY > header.offsetHeight) {
+          hamburger.classList.add("scrolled");
+        } else {
+          hamburger.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>

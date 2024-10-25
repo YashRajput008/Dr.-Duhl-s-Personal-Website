@@ -368,3 +368,9 @@ img {
   margin-top: 20px;
   margin-bottom: 200px;
 }
+
+.hamburger.scrolled .bar,
+.hamburger.scrolled::before,
+.hamburger.scrolled::after {
+  background-color: var(--primary-important);
+}

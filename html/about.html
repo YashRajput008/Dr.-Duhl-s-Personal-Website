@@ -210,5 +210,17 @@
     <script src="../js/Scroll.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/infinite.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (window.scrollY > header.offsetHeight) {
+          hamburger.classList.add("scrolled");
+        } else {
+          hamburger.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>

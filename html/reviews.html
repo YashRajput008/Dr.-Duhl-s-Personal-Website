@@ -141,6 +141,21 @@
         </div>
     </div>
 
+        <!-- List of reviews (initially hidden) -->
+        <div id="review-list" style="display: none;">
+          <h2>All Reviews</h2>
+          <div class="review-item">
+              <div class="review-header">
+                  <span class="stars">⭐⭐⭐⭐⭐</span>
+                  <span class="review-date">Reviewed on 7/2/2024</span>
+              </div>
+              <p class="review-text">
+                  My husband and I both have digestive issues and Dr. Duhl has taken excellent care of us for several years. On one visit he detected something amiss with me and had me go to the hospital immediately. The issue was not related to my digestive problem. He was looking after the whole person! He is a keeper.
+              </p>
+          </div>
+          <!-- Repeat for other reviews -->
+      </div>
+
     <!-- Footer Section -->
     <footer role="contentinfo">
       <div class="container">
@@ -182,6 +197,38 @@ document.querySelector('.right-btn').addEventListener('click', function() {
   }
 });
 
+function checkScreenSize() {
+  const screenWidth = window.innerWidth;
+
+  // If screen is below 768px, disable the carousel
+  if (screenWidth <= 1024) {
+    disableCarousel();
+  } else {
+    enableCarousel();
+  }
+}
+
+function disableCarousel() {
+  // Remove all event listeners for carousel buttons
+  document.querySelector('.left-btn').style.display = 'none';
+  document.querySelector('.right-btn').style.display = 'none';
+  document.querySelectorAll('input[name="position"]').forEach(input => {
+    input.style.display = 'none';
+  });
+}
+
+function enableCarousel() {
+  // Re-enable the carousel buttons and inputs
+  document.querySelector('.left-btn').style.display = 'block';
+  document.querySelector('.right-btn').style.display = 'block';
+  document.querySelectorAll('input[name="position"]').forEach(input => {
+    input.style.display = 'block';
+  });
+}
+
+// Check screen size on load and on window resize
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
     </script>
   </body>
 </html>
